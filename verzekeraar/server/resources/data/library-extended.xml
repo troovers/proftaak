@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="library.xsl"?>
+
+<lib:Library xmlns:lib="http://www.avans.nl/ivh5/worked-example/extended" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.avans.nl/ivh5/worked-example/extended library-extended.xsd">
+
+	<Member MembershipNumber="1004">
+		<Firstname>Robin</Firstname>
+		<Lastname>Schellius</Lastname>
+		<Address addressKind="Primary Address">
+			<Street>Hierdestraat</Street>
+			<Housenumber>5</Housenumber>
+			<City>Breda</City>
+		</Address>
+		<Address addressKind="Postal Address">
+			<Street>Verderop</Street>
+			<Housenumber>12</Housenumber>
+			<City>Ulicoten</City>
+		</Address>
+		<TelephoneNumbers>
+			<TelephoneNumber NumberType="Home">
+				<Number>076-1968201</Number>
+			</TelephoneNumber>
+			<TelephoneNumber NumberType="Mobile">
+				<Number>06-19682014</Number>
+			</TelephoneNumber>
+		</TelephoneNumbers>
+		<EmailAddress>r.schellius@avans.nl</EmailAddress>
+		<Fine>2.75</Fine>
+		<Loans>
+			<Loan CopyID="2" LendingPeriod="3">
+				<ItemNumber>857865544</ItemNumber>
+				<LendingDate>2014-06-28</LendingDate>
+			</Loan>
+			<Loan CopyID="1" LendingPeriod="2">
+				<ItemNumber>834586544</ItemNumber>
+				<LendingDate>2014-06-28</LendingDate>
+			</Loan>
+		</Loans>
+	</Member>
+
+	<Item itemNumber="1000001">
+		<Category>Action and Adventure</Category>
+		<Book>
+			<ISBN>857865544</ISBN>
+			<Title>The life of Pi</Title>
+			<Author>Yann Martel</Author>
+			<Format>Paperback</Format>
+			<Publisher>Mariner Books</Publisher>
+			<Language>English</Language>
+		</Book>
+		<PublicationDate>2003-05-01</PublicationDate>
+	</Item>
+	<Item itemNumber="1000002">
+		<Category>Literature</Category>
+		<Book>
+			<ISBN>857812365</ISBN>
+			<Title>The Old Man and the Sea</Title>
+			<Author>Ernest Hemingway</Author>
+			<Format>Hardcover</Format>
+			<Publisher>Charles Scribner's Sons</Publisher>
+			<Language>English</Language>
+		</Book>
+		<PublicationDate>1952-01-01</PublicationDate>
+	</Item>
+	<Item itemNumber="1000003">
+		<Category>Thriller</Category>
+		<Movie>
+			<EAN>8711875926</EAN>
+			<Format>DVD</Format>
+			<Title>The Sixth Sense</Title>
+			<Director>M. Night Shyamalan</Director>
+			<Actors>
+				<ActorName>Bruce Willis</ActorName>
+				<ActorName>Haley Joel Osmond</ActorName>
+				<ActorName>Tony Colette</ActorName>
+			</Actors>
+		</Movie>
+		<PublicationDate>1999-01-01</PublicationDate>
+	</Item>
+	
+	<Author>
+		<Name>Yann Martel</Name>
+		<CountryOfBirth>Spain</CountryOfBirth>
+		<BirthDate>1963</BirthDate>
+	</Author>
+	<Author>
+		<Name>Ernest Hemingway</Name>
+		<CountryOfBirth>United States</CountryOfBirth>
+		<BirthDate>1899</BirthDate>
+	</Author>
+	
+	<Actor>
+		<Name>Bruce Willis</Name>
+		<CountryOfBirth>United States</CountryOfBirth>
+		<BirthDate>1955-03-19</BirthDate>
+	</Actor>
+	
+</lib:Library>

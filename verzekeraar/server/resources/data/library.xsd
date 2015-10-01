@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.avans.nl/ivh5/worked-example"
+	xmlns:lib="http://www.avans.nl/ivh5/worked-example">
+
+    <element name="library">
+		<complexType>
+           <sequence>
+				<element name="members">
+					<complexType>
+			            <sequence>
+				    		<element name="member" type="lib:MemberType" maxOccurs="unbounded" minOccurs="0"></element>
+			            </sequence>
+					</complexType>
+				</element>
+				<element name="items">
+					<complexType>
+			            <sequence>
+				    		<element name="book" type="lib:BookType" maxOccurs="unbounded" minOccurs="0"></element>
+			            </sequence>
+					</complexType>
+				</element>
+            </sequence>
+		</complexType>
+    </element>
+
+    <complexType name="BookType">
+    	<sequence>
+    		<element name="isbn" type="lib:ISBNType"></element>
+    		<element name="title" type="string"></element>
+    		<element name="author" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="MemberType">
+    	<sequence>
+    		<element name="firstname" type="string" minOccurs="1"></element>
+    		<element name="lastname" type="string" minOccurs="1" maxOccurs="1"></element>
+    		<element name="street" type="string"></element>
+    		<element name="housenumber" type="positiveInteger"></element>
+    		<element name="city" type="string"></element>
+    		<element name="phoneNumber" type="string"></element>
+    		<element name="emailaddress" type="string"></element>
+    		<element name="fine" type="double"></element>
+	        <element name="loans">
+	          <complexType>
+	            <sequence>
+		    		<element name="loan" type="lib:LoanType" maxOccurs="unbounded" minOccurs="0"></element>
+	            </sequence>
+	          </complexType>
+	        </element>
+    	</sequence>
+	    <attribute name="membershipNumber" type="positiveInteger"></attribute>
+    </complexType>
+    
+    <complexType name="LoanType">
+    	<sequence>
+    		<element name="isbn" type="lib:ISBNType"  maxOccurs="1"  minOccurs="1"></element>
+    	</sequence>
+    	<attribute name="copyid" type="positiveInteger"></attribute>
+    	<attribute name="lendingperiod" type="positiveInteger"></attribute>
+    </complexType>
+
+    <simpleType name="ISBNType">
+    	<restriction base="positiveInteger"></restriction>
+    </simpleType>
+
+</schema>

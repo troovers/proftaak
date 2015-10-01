@@ -1,0 +1,50 @@
+//
+// IVH5 Library worked example server.policy file.
+//
+// Om deze settings te wijzigen kun je eventueel gebruik maken van de Java policytool.
+// Gebruik: start policytool vanaf de commandline, en open het juiste policy bestand.
+//
+// Robin Schellius, juli 2014.
+//
+
+
+grant {
+	permission java.security.AllPermission;
+};
+
+// This section describes the security properties for the ShowRMIRegistry application itself.
+// Modify the path to match your own installation.
+// grant codeBase "file:/C:/dev/workspace/workspace-team/bibliotheekinformatiesysteem/IVH5/client/build/deploy/-" {
+/*
+grant codeBase "*" {
+
+    // permissions to read system properties required by setup program
+    permission java.util.PropertyPermission "java.rmi.server.hostname", "read";
+    permission java.util.PropertyPermission "java.rmi.server.codebase","read";
+    permission java.util.PropertyPermission "java.rmi.server.policy","read";
+
+	// The application has a securitymanager installed, which requires certain permissions
+    // permission java.util.PropertyPermission "org.sump.showrmiregistry.defaultregistry", "read";
+	
+    // permission to connect to the activation system and the registry
+    permission java.net.SocketPermission "*:1098-1099","connect";
+	// When running on a virtual machine, the socket can be different from the default value.
+    permission java.net.SocketPermission "*","connect, resolve";
+	
+	// permission java.awt.AWTPermission "accessClipboard"; 
+};	 
+
+
+
+/*
+grant 
+{
+	// Het kan zijn dat je zelf een regel hieronder moet wijzigen om je het juiste IP-adres toe te voegen.
+	permission java.net.SocketPermission "145.48.6.147", "accept, connect, resolve";
+	permission java.net.SocketPermission "localhost", "listen, accept, connect, resolve";
+	permission java.net.SocketPermission "192.168.27.128", "accept, connect, resolve";
+	// permission java.net.SocketPermission "127.0.0.1", "accept, connect, resolve";	
+
+	permission java.util.PropertyPermission "user.dir", "read";
+};
+*/
